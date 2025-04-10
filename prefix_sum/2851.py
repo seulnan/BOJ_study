@@ -16,6 +16,7 @@ for _ in range(10):
 for i in mushroom:
     score += i # i는 각각의 버섯점수를 순회함
     if score >= 100:
+        
         if score - 100 > 100 - (score-i): # score-i가 score전의 점수를 의미!!!가 핵심포인트
             score -= i # i를 뺀 전단계가 더 작기때문에 간격이 더 작다가 포인트
             break
