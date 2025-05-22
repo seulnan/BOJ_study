@@ -1,15 +1,11 @@
-# 가능한 모든쌍??이 뭔말이지?? 
-# 근데 실제로 두개를 뽑아서 계속 계산하면 너무...오래걸리지않을까?
-from itertools import combinations
 from math import gcd
-
+from itertools import combinations
 n = int(input())
 
 for i in range(n):
     nums = list(map(int, input().split()))
-    res = 0
-    coms = combinations(nums[1:],2)
-    for a, b in coms:
+    res = 0 
+    combs = combinations(nums[1:], 2) #nums의 인덱스 1인요소부터 2개씩 조합
+    for a, b in combs:
         res += gcd(a,b)
-        
     print(res)
